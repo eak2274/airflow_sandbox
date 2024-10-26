@@ -1,0 +1,51 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+.env
+
+# Poetry specific
+poetry.lock
+# Optionally ignore the virtual environment Poetry creates
+# Uncomment if you have Poetry configured to use a virtualenv inside the project folder
+# .venv/
+
+# Byte-compiled / optimized / compiled files
+*.pyc
+*.pyo
+*.pyd
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# MyPy cache
+.mypy_cache/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# VS Code files (optional)
+.vscode/
+
+# MacOS files
+.DS_Store
+
+# IDE files (optional)
+.idea/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Logs
+/logs
