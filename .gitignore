@@ -6,8 +6,6 @@ __pycache__/
 venv/
 .env
 
-# Poetry specific
-poetry.lock
 # Optionally ignore the virtual environment Poetry creates
 # Uncomment if you have Poetry configured to use a virtualenv inside the project folder
 # .venv/
