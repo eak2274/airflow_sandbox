@@ -7,7 +7,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = ">=3.11,<3.13"
-apache-airflow = "^2.10.2"
+apache-airflow = {extras = ["postgres"], version = "^2.10.2"}
 matplotlib = "^3.9.2"
 
 
