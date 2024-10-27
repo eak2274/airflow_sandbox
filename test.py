@@ -1,4 +1,6 @@
 import requests
+import matplotlib
+
 
 def print_random_quote():
     response = requests.get('https://zenquotes.io/api/random')
@@ -7,4 +9,6 @@ def print_random_quote():
     print(quote[0]['q'])
     # print('Quote of the day: "{}"'.format(quote))
 
-print_random_quote()
+# print_random_quote()
+# print()
+print(matplotlib.__version__)
