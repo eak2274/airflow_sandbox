@@ -10,7 +10,7 @@ default_args = {
 }
 
 with DAG(
-    dag_id="dag_with_postgres_operator_v7",
+    dag_id="dag_with_postgres_operator_v8",
     default_args=default_args,
     start_date=datetime.now() - timedelta(days=2),
     schedule_interval="@daily"
@@ -31,8 +31,12 @@ with DAG(
         task_id="log_execution",
         postgres_conn_id="postgres_localhost",
         sql="""
-            insert into dag_runs (ts, dag_id) values (""" + """'{{ts}}'""" + """, '{{dag.dag_id}}')
-            """
+                INSERT INTO dag_runs (ts, dag_id) VALUES (%(ts)s, %(dag_id)s);
+            """,
+        parameters={
+            "ts": "{{ ts }}",
+            "dag_id": "{{ dag.dag_id }}"
+        }
     )
 
     task1 >> task2
