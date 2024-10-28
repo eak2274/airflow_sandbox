@@ -9,6 +9,7 @@ readme = "README.md"
 python = ">=3.11,<3.13"
 apache-airflow = {extras = ["postgres"], version = "^2.10.2"}
 matplotlib = "^3.9.2"
+apache-airflow-providers-amazon = "^9.0.0"
 
 
 [build-system]
