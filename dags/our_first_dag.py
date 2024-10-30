@@ -25,6 +25,9 @@ def pull_name(**kwargs):
     mother_name = kwargs['ti'].xcom_pull(task_ids='push_name', key='mother')
     father_name = kwargs['ti'].xcom_pull(task_ids='push_name', key='father')
     print(father_name, mother_name)
+    mother_name = kwargs['task_instance'].xcom_pull(task_ids='push_name', key='mother')
+    father_name = kwargs['task_instance'].xcom_pull(task_ids='push_name', key='father')
+    print(father_name, mother_name)
 
 
 default_args = {
@@ -34,7 +37,7 @@ default_args = {
 }
 
 dag = DAG(
-    dag_id="our_first_dag_v7",
+    dag_id="our_first_dag_v8",
     description="this is our first dag",
     default_args=default_args,
     start_date=datetime(2024, 10, 19, 15),
